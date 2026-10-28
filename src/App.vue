@@ -1,9 +1,10 @@
 <script setup>
 import { reactive, ref } from 'vue'
 import SmartImg from './components/SmartImg.vue'
+import Countdown from './components/Countdown.vue'
 
 //  CONFIG 
-const ENDPOINT = '' // URL  (mismo dominio). 
+const ENDPOINT = ''  
 
 const year = new Date().getFullYear()
 const menu = [
@@ -12,8 +13,8 @@ const menu = [
   { href: '#promocion', text: 'Promoción' }, { href: '#contacto', text: 'Contacto' }
 ]
 const badges = [
-  { i: '◇', t: 'Acero inoxidable' }, { i: '⏱', t: '10 años de garantía' },
-  { i: '◆', t: 'Fabricados para durar' }, { i: '▦', t: '131 años en la industria' }
+  { i: '◇', t: 'Acero inoxidable' }, { i: '⏱', t: '10 años de garantía en lavadoras y 5 años en secadoras ' },
+  { i: '◆', t: 'Fabricados para durar' }, { i: '▦', t: '132 años en la industria' }
 ]
 const productos = [
   { title: 'Lavadoras Industriales', text: 'Máximo rendimiento, menor consumo de agua y energía.', cta: 'Ver lavadoras', url: 'https://dexterlaundrymexico.com/categoria-equipo/lavadoras-industriales/', img: 'imagen4' },
@@ -90,21 +91,18 @@ async function enviar () {
   <!-- HERO -->
   <header id="inicio" class="hero">
     <div class="container">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-6">
-          <p class="eyebrow">Lavandería industrial</p>
-          <h1 class="display-dx">Los que saben<br>de lavadoras<br><span class="accent">conocen<br>Dexter.</span></h1>
-          <p class="lead-dx">Tecnología premium que da eficiencia y durabilidad.</p>
-          <div class="d-flex flex-wrap gap-2 mb-4">
-            <a class="btn btn-dx" href="#soluciones">Ver productos →</a>
-            <a class="btn btn-ghost" href="#contacto">Solicita una cotización</a>
-          </div>
+      <div class="row">
+        <div class="col-lg-6 hero-copy">
+          <p class="promo-kicker"><span>Promoción Dexter</span></p>
+          <h1 class="promo-h1"><span class="pct">10 ﹪</span> de<br>descuento</h1>
+          <p class="promo-line">En tu lavadora T-600 + secadora T-50</p>
+          <p class="promo-strong">Hechas para durar</p>
+          <p class="promo-sub">La garantía más extensa del mercado</p>
+          <Countdown />
+          <a class="btn btn-promo" href="#contacto">Solicita tu cotización </a>
           <ul class="hero-badges list-unstyled row row-cols-2 row-cols-sm-4 g-3 m-0">
             <li v-for="b in badges" :key="b.t" class="col"><span class="accent me-1">{{ b.i }}</span>{{ b.t }}</li>
           </ul>
-        </div>
-        <div class="col-lg-6">
-          <div class="hero-frame"><SmartImg name="imagen2" alt="Lavadora industrial Dexter" eager /></div>
         </div>
       </div>
     </div>

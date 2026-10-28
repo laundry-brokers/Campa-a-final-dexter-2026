@@ -1,8 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 
-// Busca en src/assets/img cualquier archivo cuyo nombre base coincida,
-// sin importar la extensión (webp, jpg, jpeg, png, avif, svg, gif).
+// Busca en src/assets/img cualquier archivo 
 const files = import.meta.glob('../assets/img/*.{webp,jpg,jpeg,png,avif,svg,gif,WEBP,JPG,JPEG,PNG}', {
   eager: true, query: '?url', import: 'default'
 })
