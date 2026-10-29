@@ -82,7 +82,7 @@ async function enviar () {
       <div id="menu" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto align-items-md-center gap-md-4">
           <li v-for="l in menu" :key="l.href" class="nav-item"><a class="nav-link" :href="l.href" :target="l.external ? '_blank' : null" :rel="l.external ? 'noopener noreferrer' : null">{{ l.text }}</a></li>
-          <li class="nav-item"><a class="btn btn-dx btn-nav" href="#contacto">Solicita una cotización →</a></li>
+          <li class="nav-item"><a class="btn btn-dx btn-nav" href="#contacto">Solicita tu cotización →</a></li>
         </ul>
       </div>
     </div>
@@ -94,7 +94,7 @@ async function enviar () {
       <div class="row">
         <div class="col-lg-6 hero-copy">
           <p class="promo-kicker"><span>Promoción Dexter</span></p>
-          <h1 class="promo-h1"><span class="pct">10 ﹪</span> de<br>descuento</h1>
+          <h1 class="promo-h1"><span class="pct">10 %</span> de<br>descuento</h1>
           <p class="promo-line">En tu lavadora T-600 + secadora T-50</p>
           <p class="promo-strong">Hechas para durar</p>
           <p class="promo-sub">La garantía más extensa del mercado</p>
